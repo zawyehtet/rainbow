@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreShowing;
 use App\Show;
 use App\Hall;
 use App\Movie;
@@ -45,7 +46,7 @@ class ShowController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreShowing $request)
     {
         //
         $array = $request->all();

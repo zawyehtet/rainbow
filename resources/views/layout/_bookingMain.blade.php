@@ -11,52 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="{{ url ('/css/main.css') }}">
     <title>@yield('title')</title>
     <style>
        
-        .box{
-            width:100px;
-            height:30px;
-            margin: 20px 20px;
-            
-        }
-        
-        /* .seat{
-            margin: 5px 5px;
-        } */
-        
-        .red{
-            background:#f00;
-            color:white;
-            text-align: center;
-        }
-        .blue{
-            background:cadetblue;
-        }
-        .white{
-            background:green;
-            color:white;
-            text-align: center;
-            
-        }
-        /* seat list css */
-        
-        .seat-list{
-            /* border:1px solid black; */
-            list-style: none;
-            margin:6px;
-        }
-        .seat-item{
-            display:block;
-            float: left;
-            height: 50px;
-            margin:4px;
-            padding:5px;
-        }
-        *{
-            font-family: 'Merriweather', serif;
-            
-        }
+       
         
     </style>
 </head>

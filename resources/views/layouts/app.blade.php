@@ -19,10 +19,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <style>
-        /* #gradi{
-            background-image: linear-gradient(blue, white, blue);
-        } */
+           /* clock */
     </style>
 </head>
 <body id="gradi">
@@ -82,5 +81,8 @@
             @yield('content')
         </main>
     </div>
+    <script>
+  
+    </script>
 </body>
 </html>

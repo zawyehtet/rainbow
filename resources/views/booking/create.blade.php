@@ -20,16 +20,31 @@
             {{-- showing id section --}}
             <div class="form-group">
                 <label for="seat_number">Seat Number</label>
-                <input type="number" class="form-control" name="seat_number" placeholder="Seat Number" required>
+                <input type="number" class="form-control" name="seat_number" placeholder="Seat Number">
+                @if($errors->has("seat_number"))
+					<small class="form-text text-danger">
+						{{ $errors->first('seat_number') }}
+					</small>
+				@endif
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" class="form-control" name="price" placeholder="Price" required>
+                <input type="number" class="form-control" name="price" placeholder="Price">
+                @if($errors->has("price"))
+					<small class="form-text text-danger">
+						{{ $errors->first('price') }}
+					</small>
+				@endif
             </div>
 
             <div class="form-group">
                 <label for="status">Status</label>
-                <input type="text" class="form-control" name="status" placeholder="Status" required>
+                <input type="text" class="form-control" name="status" placeholder="Status">
+                @if($errors->has("status"))
+					<small class="form-text text-danger">
+						{{ $errors->first('status') }}
+					</small>
+				@endif
             </div>
             <button type="submit" class="btn btn-success">Save</button>
         </form>

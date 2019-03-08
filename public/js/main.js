@@ -70,4 +70,8 @@ $(function () {
       }
       init();
       });
+    
     });
+    //section of clock
+    
+    

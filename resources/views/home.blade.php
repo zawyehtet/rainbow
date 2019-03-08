@@ -1,10 +1,10 @@
 @extends('layout.master')
 @section('content')
-<div class="container">
+<div class="container" >
     
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="header">
+    <div class="row justify-content-center ">
+        <div class="col-md-12 ">
+            <div class="header bg_header text-center text-light">
                 <h1><i class="fab fa-galactic-senate"></i>  Rainbow Cinema</h1>
             </div>
             @if (session('status'))
@@ -16,7 +16,7 @@
         </div>    
     </div> 
 {{-- card count with icon --}}
-<div class="row">
+<div class="row ">
     <div class="col-md-4 col-sm-4">
         <div class="wrimagecard wrimagecard-topimage">
             <a href="#">
@@ -50,13 +50,12 @@
     <div class="col-md-4 col-sm-4">
         <div class="wrimagecard wrimagecard-topimage">
             <a href="#">
-                <div class="wrimagecard-topimage_header bg-info" >
-                    <center><i class = "fa fa-clock icon-primary"></i></center>
+                <div class="wrimagecard-topimage_header bg-success " >
+                    <h1><center><i class="fas fa-map-marker-alt fa-lg text-warning"></i></i></center></h1>
                 </div>
                 <div class="wrimagecard-topimage_title">
-                <div id="timediv"></div>
+                    <h4>Hlaing,Baho Street,Yangon</h4>
                 </div>
-                
             </a>
         </div>
     </div>

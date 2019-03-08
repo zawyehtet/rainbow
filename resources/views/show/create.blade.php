@@ -2,6 +2,7 @@
 @section('title','CreateShowingTime')
 
 @section('content')
+@include('layout._header')
 
 <div class="container col-md-8 col-md-offset-2 ">
     <div class="well">
@@ -16,6 +17,11 @@
                     <option value="{{$movie->id }}">{{$movie->title}}</option>  
                     @endforeach 
                 </select>
+                @if($errors->has("movie_id"))
+					<small class="form-text text-danger">
+						{{ $errors->first('movie_id') }}
+					</small>
+				@endif
             </div>
             {{-- hall  loop  --}}
             <div class="form-group">
@@ -25,15 +31,25 @@
                     <option value="{{$hall->id }}">{{$hall->name}}</option>  
                     @endforeach 
                 </select>
+                @if($errors->has("hall_id"))
+					<small class="form-text text-danger">
+						{{ $errors->first('hall_id') }}
+					</small>
+				@endif
                 {{-- @endfor drop down loop  --}}
             </div>
             <div class="form-group">
                 <label for="show_time"><i class="far fa-calendar-alt"></i>  Showing Time</label>
-                <input type="datetime-local" class="form-control" name="show_time" required>
+                <input type="datetime-local" class="form-control" name="show_time">
+                @if($errors->has("show_time"))
+					<small class="form-text text-danger">
+						{{ $errors->first('show_time') }}
+					</small>
+				@endif
             </div>
             
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{url('/show')}}" class="btn btn-danger"> Cancel </a>
+            <button type="submit" class="btn border border-info">Save</button>
+            <a href="{{url('/show')}}" class="btn border border-danger"> Cancel </a>
         </form>
         {{-- form end*********************************** --}}
     </div>

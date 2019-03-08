@@ -2,18 +2,18 @@
 @section('title','Hall')
 
 @section('content')
-<div class="table-responsive col-md-8">
-<a href="/seat/create" class="btn btn-primary">+Add</a>
+@include('layout._header')
+<div class="table-responsive col-md-8" >
+<a href="/seat/create" class="btn border border-success">+Add</a>
 	@if($sets -> count()>0)
-	<table class="table table-striped">
+	<table class="table table-striped text-center">
 		<thead class="thead-inverse">
 			<tr>
 				<th>Hall Name</th>
 				<th>Row</th>
 				<th>Number</th>
 				<th>Price</th>
-				<th>Edit</th>
-				<th>Delete</th>
+				<th>Action</th>
 				
 			</tr>
 		</thead>
@@ -24,17 +24,18 @@
 					<td>{{$seat->row}}</td>
 					<td>{{$seat->number}}</td>
 					<td>{{$seat->price}} Kyats</td>
-					<td><a href="/seat/edit/{{$seat->id}}">
-							<button class="btn btn-primary"><i class="far fa-edit"></i></button>
-						</a>
-					</td>
-                    <td>
-					<form method="post" action="/seat/delete/{{$seat->id}}">
-                        @csrf
-                        <button type="submit" class="btn btn-danger">
-							<i class="far fa-trash-alt"></i>
-						</button>
-                        </form>
+					<td>
+						<div class="btn-group" role="group">
+							<a href="/seat/edit/{{$seat->id}}" class="btn ">
+								<i class="far fa-edit"></i>
+							</a>
+							<form method="post" action="/seat/delete/{{$seat->id}}" >
+								@csrf
+								<button type="submit" class="btn">
+									<i class="far fa-trash-alt"></i>
+								</button>
+							</form>
+						</div>
 					</td>
 					
 				</tr>

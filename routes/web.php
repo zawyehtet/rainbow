@@ -86,6 +86,9 @@ Route::middleware(['auth:web'])->group(function () {
     Route::post('user/update/{id}','UserController@update');
     Route::post('/user/delete/{id}','UserController@destroy');
 
+    // all data from db
+    Route::get('/user/data','UserController@data');
+
     
 });
 //Auth::routes();

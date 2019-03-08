@@ -1,6 +1,7 @@
 @extends('layout.master')
 @section('title','edit')
 @section('content')
+@include('layout._header')
 <div class="row">
     <div class="col-md-6">
 {{-- start edit form action*********** /movie/update/{{$movie->id}}--}}
@@ -14,8 +15,8 @@
                 <label for="email">Email</label>
                 <input type="text" class="form-control"  name="email" value="{{ $user->email }}" > 
             </div>  
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a href="{{url('/user')}}" class="btn btn-danger">Cancel</a>
+            <button type="submit" class="btn border border-success">Update</button>
+            <a href="{{url('/user')}}" class="btn border border-danger">Cancel</a>
         </form>
 {{-- end form ************************ --}}
     </div>

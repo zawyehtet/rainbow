@@ -12,8 +12,8 @@
     Theater :    <span>{{$show->hall->name}}</span>
     </li>
     <li class="list-group-item">
-        <input type="submit" class="btn btn-primary" value="Book">
-        <a href="{{url('/booking/show/book')}}" class="btn btn-danger">Cancel</a>
+        <input type="submit" class="btn border border-success" value="Book">
+        <a href="{{url('/booking/show/book')}}" class="btn border border-danger">Cancel</a>
     </li>
     
 </ul>

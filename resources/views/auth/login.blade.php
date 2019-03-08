@@ -4,10 +4,10 @@
 <div class="container " >
     <div class="row justify-content-center">   
         <div class="col-md-6">
-            <h1 class=" text-warning text-center">
+            <h1 class="text-center">
                 <i class="fab fa-galactic-senate"></i> Cinema Ticket
             </h1>
-            <div class="card">
+            <div class="card" style="background-image:url('/storage/images/seven.png');" >
                 <div class="card-header"><i class="fas fa-sign-in-alt"></i>  {{ __('Login') }}</div>
 
                 <div class="card-body">

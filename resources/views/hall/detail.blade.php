@@ -1,11 +1,10 @@
 @extends('layout.master')
 @section('title','edit')
 @section('content')
-
-   
+@include('layout._header')
 <div class="table-responsive col-md-6">
-    <a href="/seat/create" class="btn btn-success">Create</a>
-    <a href="/hall" class="btn btn-danger"><=  Go Back</a>
+    <a href="/seat/create" class="btn border border-success">Create</a>
+    <a href="/hall" class="btn border border-danger"><=  Go Back</a>
     <table class="table table-striped">
         <thead class="thead-inverse">
                 <tr>

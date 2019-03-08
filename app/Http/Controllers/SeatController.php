@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreSeat;
 use App\Seat;
 use App\Hall;
 
@@ -49,7 +50,7 @@ class SeatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreSeat $request)
     {
         //
        $array = $request->all();

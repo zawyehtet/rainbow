@@ -15,8 +15,7 @@
 				<th>Stauts</th>
 				<th>Title</th>
 				<th>Time</th>
-				<th>Edit</th>
-				<th>Delete</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,17 +25,18 @@
 					<td>{{$movie->status}}</td>
 					<td>{{$movie->title}}</td>
 					<td>{{$movie->duration}} minutes</td>
-					<td><a href="/movie/edit/{{$movie->id}}">
-						<button class="btn btn-primary"><i class="far fa-edit"></i></button>
-						</a>
-					</td>
-                    <td>
-					<form method="post" action="/movie/delete/{{$movie->id}}">
-                         @csrf
-                        <button type="submit" class="btn btn-danger">
-							<i class="far fa-trash-alt"></i>
-						</button>
-                        </form>
+					<td>
+						<div class="btn-group" role="group">
+							<a href="/movie/edit/{{$movie->id}}" class="btn ">
+								<i class="far fa-edit"></i>
+							</a>
+							<form method="post" action="/movie/delete/{{$movie->id}}" >
+								@csrf
+								<button type="submit" class="btn">
+									<i class="far fa-trash-alt"></i>
+								</button>
+							</form>
+						</div>
                     </td>
 				</tr>
 			@endforeach

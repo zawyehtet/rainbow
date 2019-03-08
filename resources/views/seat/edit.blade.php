@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('title','SeatEdit')
 @section('content')
-<h1 class="text-info bg-dark">Edit Seat,Price,Hall Details... </h1>
+@include('layout._header')
     {{-- start edit form action*********** /movie/update/{{$movie->id}}--}}
     <form  action="/seat/update/{{$seat->id}}" method="POST" >
         @csrf
@@ -26,8 +26,8 @@
             <label for="price">Price</label>
             <input type="number" class="form-control" name="price" placeholder="price" value="{{$seat->price}}" >
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
-        <a href="/seat" class="btn btn-danger"> Cancel</a>
+        <button type="submit" class="btn border border-success">Update</button>
+        <a href="/seat" class="btn border border-danger"> Cancel</a>
     </form>
     {{-- end form ************************ --}}
 @endsection

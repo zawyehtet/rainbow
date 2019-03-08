@@ -1,8 +1,8 @@
 @extends('layout.master')
 @section('title','edit')
 @section('content')
-
-    {{-- start edit form action*********** --}}
+<div class="col-md-8">
+        {{-- start edit form action*********** --}}
     <form  action="/movie/update/{{$movie->id}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
@@ -22,7 +22,9 @@
             <label for="duration">Duration</label>
             <input type="text" class="form-control"  name="duration" value="{{ $movie->duration}}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn border border-dark">Update</button>
     </form>
     {{-- end form ************************ --}}
+</div>
+    
 @endsection

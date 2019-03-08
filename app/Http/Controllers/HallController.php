@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreHall;
 use App\Hall;
 
 
@@ -40,7 +41,7 @@ class HallController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreHall $request)
     {
         //
         $array = $request->all();
@@ -98,7 +99,7 @@ class HallController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    {   
         $hall = Hall::find($id);
         $hall->delete();
         return redirect('/hall');

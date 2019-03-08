@@ -8,14 +8,15 @@
         @csrf
         <div class="row">
             {{-- section of booking page  --}}
-            <div class="col-md-4 bg-muted">
+            <div class="col-md-4 ">
                 @include('layout._detail')
                 <p class="box red" >Sold out</p> 
                 <p class="box white">Available</p>
             </div>
-            <div class="col-md-8 border" >
-                @include('layout._seat')
-            </div>
+                <div class="col-md-8" >
+                    @include('layout._seat')
+                </div>
+            
             {{-- end of middle content --}}    
         </div>  
     </form>    

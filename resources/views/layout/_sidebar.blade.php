@@ -36,7 +36,7 @@
             </a>
             <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
                 <li class="nav-item"><a class="nav-link text-light" href="{{url('/user')}}"> <i class="fas fa-users-cog"></i>User </a></li>
-                <li class="nav-item"><a class="nav-link text-light" href=""><i class="far fa-money-bill-alt"></i> Payment</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="{{url('/user/data')}}"><i class="far fa-file"></i> Report</a></li>
             </ul>
         </li>
         		
