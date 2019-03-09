@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreUser;
 use App\User;
+use PDF;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -22,23 +23,7 @@ class UserController extends Controller
 
     
     
-    public function data()
-    {   
-    //    return  $users = DB::table('booking')
-    //             ->whereDay('created_at', '31')
-    //             ->count();
-    //     return $users = DB::table('users')
-    //             ->whereMonth('created_at', '12')
-    //             ->get();
-        $booking    = DB::table('booking')->count();
-        $hall       = DB::table('hall')->count();
-        $movie      = DB::table('movie')->count();
-    //   return $bookings = DB::table('booking')->whereMonth('created_at','12')->get();
-        $users      = DB::table('users')->get();
-
-        return view('user.data',compact('booking','hall','movie'));
-    }
-
+   
     /**
      * Show the form for creating a new resource.
      *

@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-info mb-3">
     <div class="flex-row d-flex">
-        <a class="navbar-brand" href="{{url('/home')}}" title="Free Bootstrap 4 Admin Template">
+        <a class="navbar-brand" href="{{url('/')}}" title="Free Bootstrap 4 Admin Template">
             <p><i class="fab fa-galactic-senate"></i><b> Rainbow Cinema</b></p> 
         </a>
     </div>
