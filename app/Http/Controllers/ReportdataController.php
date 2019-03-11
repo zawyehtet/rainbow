@@ -40,13 +40,17 @@ class ReportdataController extends Controller
         ];
 
         // $data = [$movie=> DB::table('movie')->count()];
-        $pdf = PDF::loadView('report.data',$data);
+        $pdf = PDF::loadView('report.voucher',$data);
   
         return $pdf->download('itsolutionstuff.pdf');
         // $data = ['title' => 'Welcome to HDTuto.com'];
         // $pdf = PDF::loadView('pdf', $data);
   
         // return $pdf->download('itsolutionstuff.pdf');
+    }
+    public function voucher()
+    {
+        return view('report.voucher');
     }
 
 }

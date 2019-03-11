@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="{{ url ('/css/main.css') }}">
     <title>@yield('title')</title>
     <style>
-       
-       
-        
+  
+        .custom-checkbox-input {
+            display: none;
+        }
+  
     </style>
 </head>
 <body>
@@ -29,6 +31,8 @@
     <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-
+    <script type="text/javascript">
+        
+    </script>
 </body>
 </html>

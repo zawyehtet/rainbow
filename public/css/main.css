@@ -117,10 +117,7 @@ body, html {
     margin:4px;
     padding:5px;
   }
-  *{
-    font-family: 'Merriweather', serif;
-    
-  }
+
   .bg_header {
     /* Full height */
     height: 70%; 
@@ -131,10 +128,6 @@ body, html {
     background-size: cover;
     }
     /* ************* */
-    *{
-      font-family: 'Merriweather', serif;
-      
-  }
   .main{
       min-height: 1000px;
   }
@@ -218,6 +211,11 @@ body, html {
       background-repeat: no-repeat;
       background-size: cover;
      }
+     .bg-nav{
+        /* The image used */ 
+        background-image: linear-gradient(rgb(64,186,202),darkblue, rgb(64, 186, 202));
+
+     }
    
     /* report css*************************************************** */
 
@@ -258,13 +256,31 @@ body, html {
       font-family: 'Oswald', sans-serif;
       letter-spacing: 3px;
   }
-  .skill p,.experience p,span,ul,.color,.education .color, p ,span,.awards p,.i{
-      font-family: 'Source Code Pro', monospace;
-      /* color:RGB(66,66,66);  */
-  }
+  
    .experience .color,.education .color{
       color:RGB(233,29,99);
   }
   .i {
       color:RGB(46,68,64);
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+*{
+  font-family: "Times New Roman", Times, serif;
+}
+/* sidebar fix css */
+/* .sidebar {
+  position: absolute;
+  } */
+  /* seat  */
+  
+  .chart-css{
+    font-size: 50px;
+  }
+  
+  
+ 

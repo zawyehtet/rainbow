@@ -2,10 +2,10 @@
 @section('title','MontlyBooking')
 @section('content')
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 chart-css">
             {{-- *************************chart start ************ --}}
             <div style="width:50%;height:300px;">
-                    <canvas id="myChart" width="200" height="200"></canvas>
+                <canvas id="myChart" width="400px" height="400px"></canvas>
             </div>
             <script>
                 var chartValueFromLaravel = {{ json_encode($values) }};
@@ -18,10 +18,10 @@
                         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                         datasets: [{
                             label: 'Montly Booking',
-                            backgroundColor: '#FF3580',
-                            borderColor: '#FF3580',
+                            backgroundColor: 'blue',
+                            borderColor: 'blue',
                             data: chartValueFromLaravel,
-                            fill: false,
+                            fill: true,
                         }]
                     },
                     options: {
@@ -55,9 +55,7 @@
                             }]
                         }
                     }
-                });
-    
-                
+                });    
             </script>
             {{-- ****************************chart end*********8* --}}
         </div>

@@ -49,4 +49,5 @@
 	<h3>No showing</h3>
 	@endif
 </div>
+
 @endsection

@@ -2,7 +2,7 @@
 @section('title','BookingPage')
 @section('content')
 @include('layout._header')
-    <div class="col-md-12 bg-booking "  >
+    <div class="col-md-12"  >
         <div class="row">
             @foreach($shows as $sh)
             <div class="col-md-6 border text-center">
@@ -19,7 +19,7 @@
                         </a>
                     </div>
                 </div>
-            </div>     
+            </div>
             @endforeach
         </div>
     </div>

@@ -3,13 +3,13 @@
 <img src="/storage/{{ $show->movie->image }}" class="img-thumbnail">
 <ul class="list-group">
     <li class="list-group-item  align-items-center">
-    Movie : <span>{{$show->movie->title}}</span>
+   <h3> MOVIE :{{$show->movie->title}}</h3>
     </li>
     <li class="list-group-item  align-items-center">
-    Time :    <span>{{$show->show_time}}</span>
+    <h3> TIME :{{$show->show_time}}</h3>
     </li>
     <li class="list-group-item  align-items-center">
-    Theater :    <span>{{$show->hall->name}}</span>
+    <h3> HALL :{{$show->hall->name}}</h3>
     </li>
     <li class="list-group-item">
         <input type="submit" class="btn border border-success" value="Book">
@@ -17,5 +17,6 @@
     </li>
     
 </ul>
+
 
     {{-- end detail************** --}}

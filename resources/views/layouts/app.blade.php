@@ -24,12 +24,12 @@
            /* clock */
     </style>
 </head>
-<body id="gradi">
+<body id="gradi" style="background-image:url('/storage/images/five.jpg');">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-muted">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    RAINBOW CINEMA{{-- {{ config('app.name', 'Rainbow') }}Rainbow --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

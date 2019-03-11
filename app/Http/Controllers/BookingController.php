@@ -145,11 +145,14 @@ class BookingController extends Controller
     }
 
     public function detail($id)
-    {
+    {   
+        
+       
         $shows =   Show::with('movie','hall')->get();
         
         $show = Show::with('hall.seats')->find($id);
         $seats = $show->hall->seats;
+        
 
         $bookings =Booking::where('showing_id','=',$id)->pluck('seat_number')->toArray();
         //The pluck method retrieves all of the values for a given key
@@ -157,6 +160,8 @@ class BookingController extends Controller
         //return 'this is booking detail';
     }
     public function book(){
+       // $book = Booking::all();
+        // return $book->seat_number;
         $shows =   Show::with('movie','hall')->get();
         return view('booking.booking',compact('shows'));
     }

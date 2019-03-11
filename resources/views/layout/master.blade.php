@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="{{ url ('/css/main.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <title>@yield('title')</title>
     <style>
        
@@ -24,6 +25,7 @@
             <div class="col bg-white main pt-5 mt-3">
                 @yield('content')
             </div>
+        </div>
     </div>
 	
 	<script src="{{ url ('/js/main.js') }}"></script>
@@ -35,5 +37,6 @@
        
  
     </script>
+
 </body>
 </html>

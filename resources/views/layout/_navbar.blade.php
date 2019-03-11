@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-info mb-3">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-nav mb-3 ">
     <div class="flex-row d-flex">
         <a class="navbar-brand" href="{{url('/')}}" title="Free Bootstrap 4 Admin Template">
             <p><i class="fab fa-galactic-senate"></i><b> Rainbow Cinema</b></p> 
