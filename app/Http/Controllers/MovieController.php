@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreMovie;
+use Illuminate\Support\Facades\DB;
 use App\Movie;
+
 
 class MovieController extends Controller
 {
@@ -15,8 +18,10 @@ class MovieController extends Controller
     public function index()
     {
         //
-        $movs   = Movie::paginate(5);
-        $movies = Movie::all();
+        //$movies= Movie::with('hall')->paginate(5);
+        // $movs   = Movie::paginate(5);
+       // $movies = Movie::all()->paginate(5);
+       $movies = DB::table('movie')->paginate(2);
 
 
         return view('movie.index',compact('movies','movs'));

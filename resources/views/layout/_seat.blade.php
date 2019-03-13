@@ -1,5 +1,5 @@
           
-    <ul class=" checked-list-box "> 
+    <ul class=" checked-list-box mt-80"> 
         @foreach($seats as $seat)
             @php
                 //$bookings = ['2', '7'];

@@ -33,8 +33,8 @@
 					    </small>
 				    @endif
                 </div>
-                <button type="submit" class="btn border border-success">Confirm</button>
-                <a href="/user" class="btn  border border-danger">Cancel</a>
+                <button type="submit" class="btn btn-success">save</button>
+                <a href="/user" class="btn  btn-danger">cancel</a>
                 
                 
             </form>

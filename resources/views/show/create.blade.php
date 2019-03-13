@@ -48,8 +48,8 @@
 				@endif
             </div>
             
-            <button type="submit" class="btn border border-info">Save</button>
-            <a href="{{url('/show')}}" class="btn border border-danger"> Cancel </a>
+            <button type="submit" class="btn btn-success">save</button>
+            <a href="{{url('/show')}}" class="btn btn-danger"> cancel </a>
         </form>
         {{-- form end*********************************** --}}
     </div>

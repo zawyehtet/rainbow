@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','edit')
+@section('title','Edit Movie')
 @section('content')
 <div class="col-md-8">
         {{-- start edit form action*********** --}}
@@ -22,7 +22,7 @@
             <label for="duration">Duration</label>
             <input type="text" class="form-control"  name="duration" value="{{ $movie->duration}}" required>
         </div>
-        <button type="submit" class="btn border border-dark">Update</button>
+        <button type="submit" class="btn btn-facebook ">update</button>
     </form>
     {{-- end form ************************ --}}
 </div>

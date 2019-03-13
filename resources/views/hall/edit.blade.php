@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','edit')
+@section('title','Hall Edit')
 @section('content')
 @include('layout._header')
 <div class="col-md-4">
@@ -12,8 +12,8 @@
             <input type="text" class="form-control"  name="name" value="{{ $hall->name }}" > 
         </div> 
         
-        <button type="submit" class="btn border border-primary">Update</button>
-        <a href="/hall" class="btn border border-danger">Cancel</a>
+        <button type="submit" class="btn btn-primary">update</button>
+        <a href="/hall" class="btn btn-danger">cancel</a>
     </form>
     {{-- end form ************************ --}}
 </div>

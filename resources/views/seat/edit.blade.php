@@ -26,8 +26,8 @@
             <label for="price">Price</label>
             <input type="number" class="form-control" name="price" placeholder="price" value="{{$seat->price}}" >
         </div>
-        <button type="submit" class="btn border border-success">Update</button>
-        <a href="/seat" class="btn border border-danger"> Cancel</a>
+        <button type="submit" class="btn btn-facebook">update</button>
+        <a href="/seat" class="btn btn-danger"> cancel</a>
     </form>
     {{-- end form ************************ --}}
 @endsection

@@ -15,8 +15,8 @@
                 <label for="email">Email</label>
                 <input type="text" class="form-control"  name="email" value="{{ $user->email }}" > 
             </div>  
-            <button type="submit" class="btn border border-success">Update</button>
-            <a href="{{url('/user')}}" class="btn border border-danger">Cancel</a>
+            <button type="submit" class="btn btn-primary">update</button>
+            <a href="{{url('/user')}}" class="btn btn-danger">cancel</a>
         </form>
 {{-- end form ************************ --}}
     </div>

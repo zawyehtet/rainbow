@@ -90,6 +90,7 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('/data','ReportdataController@data');
     Route::get('/data/pdf','ReportdataController@generatePDF');
     Route::get('/data/voucher','ReportdataController@voucher');
+    Route::get('/data/inputvalue/voucher','ReportdataController@inputValue');
     // reports
     Route::get('/monthly/report', 'ReportController@monthly');
     

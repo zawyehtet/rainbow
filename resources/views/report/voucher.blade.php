@@ -58,14 +58,14 @@
     <div class="pdf">
         <div class="frame">
             <div class="name">
-                <h1>သက်တန့် ရုပ်ရှင် ရုံ</h1>
+                <h1>WPA30 CINEMA</h1>
                 <hr>
             </div>
             <!-- section of name field -->
             <div class="address">
-                <p>ဗဟိုလမ်း  </p>
-                <p>ရန်ကုန် ,လိူင် </p>    
-                <p class="color">၀၉၄၅၆၇၈၉၀</p>
+                <p>Baho Street  </p>
+                <p>Yangon ,Hlaing </p>    
+                <p class="color">094567890</p>
                 <p class="color">RAINBOW@EXAMPLE.COM</p>
                 <p class="color">CASHER: Admin</p>
             </div>
@@ -73,14 +73,14 @@
             <hr>
             <div class="experience">
                 <div class="extitle">
-                    <h3>ပြသမည့်ဇာက်ကား : BLADE RUNNER</h3>
-                    <h3>ရုပ်ရှင် ရုံ    : HALL A</h3>
-                    <h3>ပြသမည့်နေ့: 14-MAR-2019</h3>
-                    <h3>ပြသမည့်အချိန်: 02:00:PM</h3>
-                    <h3>ထိုင်ခုံ  : 11</h3>
-                    <h3>ရိုး        : 2</h3>
+                    <h3>Movie : BLADE RUNNER</h3>
+                    <h3>Theater   : HALL A</h3>
+                    <h3>Showing date: 14-MAR-2019</h3>
+                    <h3>Showing time: 02:00:PM</h3>
+                    <h3>Seat  : 11</h3>
+                    <h3>Row        : 2</h3>
                     <hr>
-                    <h3>စုစုပေါင်း(MMK):2000 KS</h3>
+                    <h3>Total(MMK):2000 KS</h3>
                     <hr>
 
                 </div>
@@ -88,8 +88,8 @@
             <div class="experience">
                 <div class="extitle">
                     <p>Items Sold are not exchangeable</p>
-                    <p>ကျေးဇူးပြုပြီး  ကောင်တာမှမထွက်ခွာမှီ လက်မှက်များကို သေချာစွာ စစ်ဆေးပေးပါ  ပြန်လည်လှဲပေးမည်မဟုက်ပါ
-                    "ကျေးဇူးအထူးတင်ပါသည်"</p>
+                    {{-- <p>ကျေးဇူးပြုပြီး  ကောင်တာမှမထွက်ခွာမှီ လက်မှက်များကို သေချာစွာ စစ်ဆေးပေးပါ  ပြန်လည်လှဲပေးမည်မဟုက်ပါ
+                    "ကျေးဇူးအထူးတင်ပါသည်"</p> --}}
                     <h3>"Thank You"</h3>
                 </div>
             </div>

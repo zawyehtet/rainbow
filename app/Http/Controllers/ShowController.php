@@ -18,11 +18,11 @@ class ShowController extends Controller
     public function index()
     {   
         //return Show::all();
-        $shows = Show::paginate(5);
-        $showingMovies =   Show::with('movie','hall')->get();
+        //$shows = Show::paginate(5);
+        $showingMovies =   Show::with('movie','hall')->paginate(3);
         // $showingMovies =   Show::get();
         //*****************call belongto function from show model for relationship ********/
-        return view('show.index',compact('showingMovies','shows'));
+        return view('show.index',compact('showingMovies'));
         //return view('show.index');
     }
 

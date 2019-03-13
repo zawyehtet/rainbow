@@ -1,15 +1,19 @@
+
 @extends('layout.master')
-@section('title','movie')
+@section('title','Movie Datatable')
 
 @section('content')
 @include('layout._header')
-@if(session('status'))
-	<p class="alert alert-success">{{session('status')}}</p>
-@endif 
-<div class="table-responsive text-center">
-	@if($movs-> count()>0)
-	<table class="table table-border">
-		<thead class="thead-inverse">
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+	<h6 class="m-0 font-weight-bold text-primary">DataTable</h6>
+</div>
+<div class="card-body">
+	<div class="table-responsive">
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+			<thead>
 			<tr>
 				<th>Movie Poster</th>
 				<th>Stauts</th>
@@ -17,9 +21,9 @@
 				<th>Time</th>
 				<th>Option</th>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach($movies as $movie)
+			</thead>
+			<tbody>
+				@foreach($movies as $movie)
 				<tr>
 					<td ><img src="/storage/{{ $movie->image }}" width="100px" height="auto"></td>
 					<td>{{$movie->status}}</td>
@@ -33,28 +37,33 @@
 							<ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/movie/edit/{{$movie->id}}" class="btn btn-default dropdown-item ">
-										<i class="far fa-edit"></i> EDIT
+										<i class="far fa-edit"></i> edit
 									</a>
 								</li>
 								<li>
 									<form method="post" action="/movie/delete/{{$movie->id}}" >
 										@csrf
 										<button type="submit" class="btn btn-default dropdown-item">
-											<i class="far fa-trash-alt"></i> DELETE
+											<i class="far fa-trash-alt"></i> delete
 										</button>
 									</form>
 								</li>
 							</ul>
 						</div>
-					</td>
+					</td>	
 				</tr>
-			@endforeach
-			
-		</tbody>
-	</table>
-	{{$movs->links()}}
-	@else
-	<h3>No showing</h3>
-	@endif
+				@endforeach
+			</tbody>
+		</table>
+		{!! $movies->links() !!}
+	</div>
 </div>
+</div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
 @endsection

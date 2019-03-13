@@ -17,12 +17,11 @@ class HallController extends Controller
     public function index()
     {
         //
-        $hallies  = Hall::paginate(5);
-        $halls = Hall::with('seats')->get();
+        $halls = Hall::with('seats')->paginate(5);
         //return $halls;
 
 
-        return view('hall.index',compact('halls','hallies'));
+        return view('hall.index',compact('halls'));
     }
 
     /**

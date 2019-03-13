@@ -16,15 +16,14 @@ class SeatController extends Controller
      */
     public function index()
     {
-        $sets  = Seat::paginate(5);
-        $seats = Seat::with('hall')->get();
+        $seats  = Seat::with('hall')->paginate(5);
         // $seat = Seat::find(1);
 
         // return $seat->hall->name;
         //return $seats;
 
         //return $seats->hall->name;
-        return view('seat.index',compact('seats','sets'));
+        return view('seat.index',compact('seats'));
         //$seats = Seat::all();
         //return $halls;
 

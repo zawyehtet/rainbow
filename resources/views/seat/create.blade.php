@@ -41,8 +41,8 @@
                 <input type="number" class="form-control" name="price" placeholder="price" value="{{ old('price') }}">
             </div>
             
-            <button type="submit" class="btn border border-success">Save</button>
-            <a href="/seat" class="btn border border-danger">Cancel</a>
+            <button type="submit" class="btn btn btn-success">save</button>
+            <a href="/seat" class="btn btn btn-danger">cancel</a>
         </form>
         {{-- form end*********************************** --}}
     </div>

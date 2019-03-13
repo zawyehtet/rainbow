@@ -27,8 +27,8 @@
             <label for="show_time"><i class="far fa-calendar-alt"></i> Time</label>
             <input type="datetime-local" class="form-control"  name="show_time"  value="{{$show->show_time->format('Y-m-d\TH:i')}}">
         </div>
-        <button type="submit" class="btn border border-success">Update</button>
-        <a href="{{url('/show')}}" class="btn border border-danger">Cancel</a>
+        <button type="submit" class="btn btn-facebook">update</button>
+        <a href="{{url('/show')}}" class="btn btn-danger">cancel</a>
     </form>
     {{-- end form ************************ --}}
 @endsection

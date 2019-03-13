@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','Create')
+@section('title','Create Movie')
 
 @section('content')
 @include('layout._header')
@@ -46,8 +46,8 @@
 				@endif
             </div>
             
-            <button type="submit" class="btn border border-success">Save</button>
-            <a href="{{url('/movie')}}" class="btn border border-danger">Cancel</a>
+            <button type="submit" class="btn btn-success ">save</button>
+            <a href="{{url('/movie')}}" class="btn btn-danger">cancel</a>
         </form>
         {{-- form end*********************************** --}}
     </div>

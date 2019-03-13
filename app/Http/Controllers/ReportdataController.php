@@ -52,5 +52,16 @@ class ReportdataController extends Controller
     {
         return view('report.voucher');
     }
+    // public function inputValue( $name)
+    // {
+    //     $getName = $name;
+    //     $finds = Booking::whereName($name)->get();
+    //     foreach($finds as $find){
+    //         array_push($seat_number,$find->seat_number);
+    //     }
+    //    return $seat_number=explode(",",$find->seat_number);
+    //     return  $cameraVideo = $request->input('booking_seats');
+    //    //return $request->all();
+    // }
 
 }

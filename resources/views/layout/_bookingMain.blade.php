@@ -18,6 +18,16 @@
         .custom-checkbox-input {
             display: none;
         }
+        
+    
+        .seat-item {
+            display: block;
+            float: left;
+            height: 50px;
+            margin: 4px;
+            padding: 4px;
+            width:55px;
+        }
   
     </style>
 </head>

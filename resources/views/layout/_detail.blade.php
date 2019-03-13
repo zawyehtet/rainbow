@@ -3,17 +3,17 @@
 <img src="/storage/{{ $show->movie->image }}" class="img-thumbnail">
 <ul class="list-group">
     <li class="list-group-item  align-items-center">
-   <h3> MOVIE :{{$show->movie->title}}</h3>
+   <h4> MOVIE :{{$show->movie->title}}</h4>
     </li>
     <li class="list-group-item  align-items-center">
-    <h3> TIME :{{$show->show_time}}</h3>
+    <h4> TIME :{{$show->show_time}}</h4>
     </li>
     <li class="list-group-item  align-items-center">
-    <h3> HALL :{{$show->hall->name}}</h3>
+    <h4> HALL :{{$show->hall->name}}</h4>
     </li>
     <li class="list-group-item">
-        <input type="submit" class="btn border border-success" value="Book">
-        <a href="{{url('/booking/show/book')}}" class="btn border border-danger">Cancel</a>
+        <input type="submit" class="btn btn-success" value="Book">
+        <a href="{{url('/booking/show/book')}}" class="btn btn-danger">Cancel</a>
     </li>
     
 </ul>

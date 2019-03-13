@@ -8,7 +8,7 @@
         @csrf
         <div class="row">
             
-                <div class="col-md-8 " >
+                <div class="col-md-8 " style="background-image:url('/storage/images/4.jpeg');" >
                     @include('layout._seat')
                     
                 </div>

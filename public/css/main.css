@@ -89,6 +89,15 @@ body, html {
     margin: 5px 5px;
   } */
 
+
+.seat-item {
+    display: block;
+    float: left;
+    height: 50px;
+    margin: 4px;
+    padding: 4px;
+}
+
   .red{
     background:#f00;
     color:white;
@@ -211,11 +220,7 @@ body, html {
       background-repeat: no-repeat;
       background-size: cover;
      }
-     .bg-nav{
-        /* The image used */ 
-        background-image: linear-gradient(rgb(64,186,202),darkblue, rgb(64, 186, 202));
 
-     }
    
     /* report css*************************************************** */
 
