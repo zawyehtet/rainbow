@@ -1,53 +1,67 @@
 @extends('layout.master')
-@section('title','Booking')
+@section('title','booking')
 
 @section('content')
-<a href="{{url('/booking/create')}}" class="btn btn-success"> Booking  </a>
-<div class="table-responsive">
-	@if($books->count() > 0)
-	<table class="table table-striped">
-		<thead class="thead-inverse">
-			<tr>
-				<th>Booking Id</th>
-				<th>Show Id</th>
-				<th>Seat Number</th>
-				<th>Price</th>
-				<th>Showing Time</th>
-				<th>Edit</th>
-				<th>Delete</th>	
-			</tr>
-		</thead>
-		<tbody>
-			@foreach($bookings as $bk)
-				<tr>
-					<td>{{$bk->id}}</td>
-					<td>{{$bk->showing_id}}</td>
-					<td>{{$bk->seat_number}}</td>
-					<td>{{$bk->price }}Kyats</td>
-					<td>{{$bk->status}}</td>
-					<td><a href="/booking/edit/{{$bk->id}}">
-						<button class="btn btn-primary">
-							<i class="far fa-edit"></i>
-						</button>
-						</a>
-					</td>
-                    <td>
-					<form method="post" action="/booking/delete/{{$bk->id}}">
-                        @csrf
-                        <button type="submit" class="btn btn-danger">
-							<i class="far fa-trash-alt"></i>
-						</button>
-                        </form>
-					</td>
-								
-				</tr>
-			@endforeach
-		</tbody>
-	</table>
-	{{ $books->links() }}
-	@else
-		<h2>No Showing</h2>
-	@endif
-	
+@include('layout._header')
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4 col-md-8 ">
+<div class="card-header py-3 ">
+		<a href="" class="btn btn-primary"> <i class="fas fa-plus"></i> add new </a>
 </div>
+<div class="card-body text-center">
+	<div class="table-responsive">
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+			<thead>
+			<tr>
+                <th>Booking Id</th>
+                <th>Total Price</th>
+				<th>Action</th>
+			</tr>
+			</thead>
+			<tbody>
+				@foreach($booking_number as $bn)
+					<tr>
+                    <td>{{$bn->booking_number}}</td>
+                    <td>{{$bn->total_price}}</td>
+						<td>
+							<div class="btn-group text-center" >
+								<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+									<i class="fas fa-cogs icon icon-danger"></i> <span class="caret bg-danger"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href="" class="btn ">
+											<i class="far fa-edit"></i>
+										</a>
+									</li>
+									<li>
+										<form method="post" action="" >
+											@csrf
+											<button type="submit" class="btn delete-btn">
+												<i class="far fa-trash-alt"></i>
+											</button>
+										</form>
+									</li>
+									<li>
+										<a href="" class="btn"><i class="fas fa-info-circle"></i></a>
+									</li>
+								</ul>
+							</div>
+						</td>	
+					</tr>
+				@endforeach
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+</div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
 @endsection

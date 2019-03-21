@@ -9,6 +9,7 @@ use App\Seat;
 use App\Show;
 use App\Booking;
 use Session;
+use DB;
 
 class BookingController extends Controller
 {
@@ -19,10 +20,19 @@ class BookingController extends Controller
      */
     public function index()
     {   
-        $books      =     Booking::paginate(5);
-        $bookings   =     Booking::with('show')->get();
+        
+        $booking_number = DB::table('booking')
+                ->select(
+                    'booking_number',
+                    DB::raw('sum(price) as `total_price`')
+                )
+                ->groupby('booking_number')
+                ->get();
+            //get all same booking_number group by
+        // $books = Booking::paginate(5);
+        //return $bookings = Booking::with('show')->groupBy('booking_number')->get();
 
-       return view('booking.index',compact('bookings','books'));
+       return view('booking.index',compact('booking_number'));
     }
 
     
@@ -51,15 +61,19 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+       $booking_number = \Carbon\Carbon::now()->format('YmdHis');
+        //booking id create with date year//for id
         $bookingSeats = $request->booking_seats;
         foreach($bookingSeats as $bs)
         {
            $seat =  Seat::find($bs);
            Booking::create([
                'showing_id' =>$request->showing_id,
+               'movie_id'=> $request->movie_id,
                'seat_number'=>$seat->number,
                'price'      =>$seat->price,
-               'status'     =>"comfirm"
+               'status'     =>"comfirm",
+               'booking_number'=>$booking_number
            ]);
            
         }

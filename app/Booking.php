@@ -9,9 +9,11 @@ class Booking extends Model
     protected $table    = 'booking';
     protected $fillable = [
         'showing_id',
+        'movie_id',
         'seat_number',
         'price',
-        'status'
+        'status',
+        'booking_number'
     ];
 
     public function movie()

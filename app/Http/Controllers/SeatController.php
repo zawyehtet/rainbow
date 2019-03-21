@@ -16,7 +16,7 @@ class SeatController extends Controller
      */
     public function index()
     {
-        $seats  = Seat::with('hall')->paginate(5);
+        $seats  = Seat::with('hall')->paginate(10);
         // $seat = Seat::find(1);
 
         // return $seat->hall->name;

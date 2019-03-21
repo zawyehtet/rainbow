@@ -30,8 +30,9 @@
       <div class="topbar-divider d-none d-sm-block"></div>
         <li class="nav-item dropdown active ">
             <a id="navbarDropdown " class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }} <span class="caret "></span>
-                <i class="fas fa-user-alt"></i>
+                {{ Auth::user()->name }}&nbsp&nbsp
+                <span class="caret "></span>
+                <i class="far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right  " aria-labelledby="navbarDropdown">
                 <a class="dropdown-item " href="{{ route('logout') }}"

@@ -34,9 +34,7 @@
 				    @endif
                 </div>
                 <button type="submit" class="btn btn-success">save</button>
-                <a href="/user" class="btn  btn-danger">cancel</a>
-                
-                
+                <a href="/user" class="btn  btn-danger">cancel</a> 
             </form>
         </div>
     </div>

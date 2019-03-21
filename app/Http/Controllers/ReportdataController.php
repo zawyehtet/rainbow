@@ -6,17 +6,14 @@ use Illuminate\Http\Request;
 use App\User;
 use PDF;
 use Illuminate\Support\Facades\DB;
+use App\Booking;
+use App\Movie;
 
 class ReportdataController extends Controller
 {
     public function data()
     {   
-    //    return  $users = DB::table('booking')
-    //             ->whereDay('created_at', '31')
-    //             ->count();
-    //     return $users = DB::table('users')
-    //             ->whereMonth('created_at', '12')
-    //             ->get();
+   
         $price      = DB::table('booking')->sum('price');
         $booking    = DB::table('booking')->count();
         $hall       = DB::table('hall')->count();
@@ -28,40 +25,52 @@ class ReportdataController extends Controller
     }
 
     public function generatePDF(){
+        $movie_id = DB::table('booking')
+                ->select(
+                    'movie_id',
+                    DB::raw('sum(price) as `total_price`')
+                )
+                ->groupby('movie_id')
+                ->get();
         $price      = DB::table('booking')->sum('price');
         $booking    = DB::table('booking')->count();
         $hall       = DB::table('hall')->count();
         $movie      = DB::table('movie')->count();
+        $movies     = Movie::all();
         $data = [
             'movie'     => $movie,
             'booking'   => $booking,
             'hall'      => $hall,
             'price'     => $price,
+            'movie_id'=>$movie_id,
+            'movies' =>$movies,
         ];
 
-        // $data = [$movie=> DB::table('movie')->count()];
-        $pdf = PDF::loadView('report.voucher',$data);
+        // $data =0,0,720,1440 [$movie=> DB::table('movie')->count()];
+        $customPaper = array(0,0,567.00,283.80);
+        //$pdf = PDF::loadView('pdf.retourlabel', compact('retour','barcode'))->setPaper($customPaper, 'landscape');
+        $pdf = PDF::loadView('report.voucher',$data)->setPaper($customPaper, 'landscape');
   
-        return $pdf->download('itsolutionstuff.pdf');
-        // $data = ['title' => 'Welcome to HDTuto.com'];
-        // $pdf = PDF::loadView('pdf', $data);
-  
-        // return $pdf->download('itsolutionstuff.pdf');
+        return $pdf->download('wap30.pdf');
+        
     }
     public function voucher()
     {
-        return view('report.voucher');
+        //return Booking::all();
+        $movies= Movie::all();
+        $movie_id = DB::table('booking')
+                ->select(
+                    'movie_id',
+                    DB::raw('sum(price) as `total_price`')
+                )
+                ->groupby('movie_id')
+                ->get();
+            //get all same booking_number group by
+        // $books = Booking::paginate(5);
+        //return $bookings = Booking::with('show')->groupBy('booking_number')->get();
+    
+        return view('report.voucher',compact('movie_id','movies'));
     }
-    // public function inputValue( $name)
-    // {
-    //     $getName = $name;
-    //     $finds = Booking::whereName($name)->get();
-    //     foreach($finds as $find){
-    //         array_push($seat_number,$find->seat_number);
-    //     }
-    //    return $seat_number=explode(",",$find->seat_number);
-    //     return  $cameraVideo = $request->input('booking_seats');
-    //    //return $request->all();
-    // }
+    
 
 }

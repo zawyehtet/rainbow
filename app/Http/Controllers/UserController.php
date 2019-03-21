@@ -83,7 +83,7 @@ class UserController extends Controller
         User::where('id', '=', $id)->update(
             [
                 'name'=>    $request->name,
-                'email'=>   $request->email
+                'email'=>   $request->email,
             ]
         );
         return redirect('/user');

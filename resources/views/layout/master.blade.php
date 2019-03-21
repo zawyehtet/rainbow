@@ -49,10 +49,10 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <footer class="sticky-footer bg-white text-black-50">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; WPA30 Website 2019</span>
+            <span>power by &copy; WPA30 2019</span>
           </div>
         </div>
       </footer>
@@ -60,9 +60,8 @@
 
     </div>
     <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
+    
+    
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
@@ -106,6 +105,16 @@
   <script src="/sb-admin/js/demo/chart-pie-demo.js"></script> --}}
   <script src="/js/report-bar-chart.js"></script>
   <script src="/js/report-area-chart.js"></script>
+  <script src="/js/monthlyMovie-bar-chart.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.delete-btn').click(function(){
+                alert('Are you Ok!');
+        });
+    });
+  
+  </script>
   
 </body>
 

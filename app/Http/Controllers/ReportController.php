@@ -30,9 +30,27 @@ class ReportController extends Controller
             $values[$i] = isset($report[$rep])?$report[$rep]:0;
         }
         
-        // return $values;
+        //return $values;
+        //mothly movie function
+       // $model = new Booking();
+        $movie_booking = $model
+            ->select(
+                'movie_id',
+                DB::raw('count(booking_number) as `total_booking`')
+            )
+            ->groupby('movie_id')
+            ->get();
+
+        $movie_booking->load('movie');
+        $movies = [];
+        $counts = [];
+        foreach($movie_booking as $mb){
+            $movies[] = $mb->movie->title;
+            $counts[] = $mb->total_booking;
+        }
         
-        return view('report.monthly-chart', compact('values'));
+        // return $movies; 
+        return view('report.monthly-chart', compact('values','movies','counts'));
     
     }
 }

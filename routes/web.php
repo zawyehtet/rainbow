@@ -1,5 +1,14 @@
 <?php
-
+/*
+|--------------------------------------------------------------------------
+| Test Routes
+|--------------------------------------------------------------------------
+|
+|
+*/
+Route::get('/test', function(){
+    return $date = \Carbon\Carbon::now()->format('YmdHis');
+});
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +41,8 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('/movie/edit/{id}','MovieController@edit');
     Route::post('/movie/update/{id}','MovieController@update');
     Route::post('/movie/delete/{id}','MovieController@destroy');
+   
+
     //Route::get('/movie/delete/{id}','MovieController@delete');
     //end movie route list************************************8
 
@@ -93,6 +104,7 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('/data/inputvalue/voucher','ReportdataController@inputValue');
     // reports
     Route::get('/monthly/report', 'ReportController@monthly');
+    //Route::get('/monthly/movie','ReportController@monthlyMovie');
     
 });
 //Auth::routes();

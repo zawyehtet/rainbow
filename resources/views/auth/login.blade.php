@@ -5,7 +5,7 @@
     <div class="row justify-content-center" >   
         <div class="col-md-6">
             <h1 class="text-center">
-                <i class="fab fa-galactic-senate"></i> Cinema Ticket
+                <i class="fab fa-laravel"></i>  WPA30 CINEMA TICKET
             </h1>
             <div class="card"  >
                 <div class="card-header"><i class="fas fa-sign-in-alt"></i>  {{ __('Login') }}</div>

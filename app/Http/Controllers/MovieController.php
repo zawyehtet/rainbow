@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreMovie;
 use Illuminate\Support\Facades\DB;
 use App\Movie;
+// use DB;
 
 
 class MovieController extends Controller
@@ -17,14 +18,9 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
-        //$movies= Movie::with('hall')->paginate(5);
-        // $movs   = Movie::paginate(5);
-       // $movies = Movie::all()->paginate(5);
-       $movies = DB::table('movie')->paginate(2);
-
-
-        return view('movie.index',compact('movies','movs'));
+    
+       $movies = DB::table('movie')->paginate(4);
+        return view('movie.index',compact('movies'));
     }
 
     /**
@@ -98,13 +94,7 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        // $validatedData = $request->validate([
-        //     'image' => 'required',
-        //     'status'=> ' required',
-        //     'title' => 'required',
-        //     'duration' => 'required',
-        // ]);
+        
         if ($request->hasFile('image')) {
             Movie::where('id', '=', $id)->update(
                 [
@@ -144,5 +134,6 @@ class MovieController extends Controller
         //return " delte successfully";
         return redirect('/movie');
     }
+   
     
 }

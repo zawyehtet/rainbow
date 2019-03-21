@@ -7,6 +7,7 @@ use App\Movie;
 use App\Hall;
 use App\Seat;
 use App\Show;
+use App\User;
 use DB;
 use Carbon\Carbon;
 //models
@@ -32,12 +33,12 @@ class HomeController extends Controller
     public function index()
     {   
         $bookings=Booking::count();
-        $movies = Movie::count();
+        $movie_count = Movie::count();
         $halls  = Hall::count();
         $shows = Show::with('movie','hall')->get();
         $movie =  Movie::all();
 
-        //for charts
+        // monthly booking for charts
         $model = new Booking();
         $report = DB::table('booking')
                 ->whereYear('created_at', 2019)
@@ -55,9 +56,27 @@ class HomeController extends Controller
             $rep = $i+1;
             $values[$i] = isset($report[$rep])?$report[$rep]:0;
         }
-        
 
-        return view('/home',compact('shows','movie','movies','halls','bookings','values'));
+        //most booking movie
+        $movie_booking = $model
+            ->select(
+                'movie_id',
+                DB::raw('count(booking_number) as `total_booking`')
+            )
+            ->groupby('movie_id')
+            ->get();
+
+        $movie_booking->load('movie');
+        $movies = [];
+        $counts = [];
+        foreach($movie_booking as $mb){
+            $movies[] = $mb->movie->title;
+            $counts[] = $mb->total_booking;
+        }
+
+        //end of movie chart function
+        
+        return view('/home',compact('shows','movie','movie_count','halls','bookings','values','movies','counts'));
     }
 
     public function home()
@@ -66,6 +85,8 @@ class HomeController extends Controller
         $shows = Show::with('movie','hall')->get();
         return view('/home',compact('shows','movies' ));
     }
+
+   
 
     
     

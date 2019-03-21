@@ -23,6 +23,7 @@
             <input type="text" class="form-control"  name="duration" value="{{ $movie->duration}}" required>
         </div>
         <button type="submit" class="btn btn-facebook ">update</button>
+        <a href="{{url('/movie')}}" class="btn btn-danger">cancel</a>
     </form>
     {{-- end form ************************ --}}
 </div>
