@@ -167,6 +167,7 @@ class BookingController extends Controller
             $show = Show::with('hall.seats')->find($id);
             $seats = $show->hall->seats;
             $bookings =Booking::where('showing_id','=',$id)->pluck('seat_number')->toArray();
+            //select `seat_number` from `booking` where `showing_id` = '1'
             //The pluck method retrieves all of the values for a given key
             return view('booking.detail',compact('shows','show', 'seats','bookings'));
         

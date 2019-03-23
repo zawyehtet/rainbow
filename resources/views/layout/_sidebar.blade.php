@@ -92,6 +92,10 @@
         <h6 class="collapse-header">Custom Components:</h6>
             <a class="collapse-item" href="{{url('/user')}}"> <i class="fas fa-user-cog"></i> User</a>
             <a class="collapse-item" href="{{url('/data/voucher')}}"><i class="far fa-file-pdf"></i>  Monthly Sale PDF</a>
+            <a href="{{url('/data/pdf')}}" class="collapse-item">
+              <i class="fas fa-download"></i>
+               Generate Report
+            </a>
         </div>
     </div>
     </li>

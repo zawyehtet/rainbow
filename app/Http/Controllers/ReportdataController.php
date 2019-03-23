@@ -57,6 +57,7 @@ class ReportdataController extends Controller
     public function voucher()
     {
         //return Booking::all();
+        $price      = DB::table('booking')->sum('price');
         $movies= Movie::all();
         $movie_id = DB::table('booking')
                 ->select(
@@ -65,11 +66,12 @@ class ReportdataController extends Controller
                 )
                 ->groupby('movie_id')
                 ->get();
-            //get all same booking_number group by
+     //return   $movie_id->total_price;
+        //get all same booking_number group by
         // $books = Booking::paginate(5);
         //return $bookings = Booking::with('show')->groupBy('booking_number')->get();
     
-        return view('report.voucher',compact('movie_id','movies'));
+        return view('report.voucher',compact('movie_id','movies','price'));
     }
     
 

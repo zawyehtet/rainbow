@@ -44,10 +44,8 @@
 
         </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
-
       <!-- Footer -->
       <footer class="sticky-footer bg-white text-black-50">
         <div class="container my-auto">
@@ -57,12 +55,7 @@
         </div>
       </footer>
       <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
-    
-    
-
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
@@ -110,9 +103,13 @@
   <script>
     $(document).ready(function(){
         $('.delete-btn').click(function(){
-                alert('Are you Ok!');
+                alert('You should delete firt booking and then showing');
         });
     });
+    //dashboard date time
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleString();
+
   
   </script>
   

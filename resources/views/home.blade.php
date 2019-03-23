@@ -9,31 +9,19 @@
              Generate Report
         </a>
     </div>
-    {{-- <div class="row justify-content-center ">
-        <div class="col-md-12 ">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-            <div class="alert alert-success col-md-4"> <i class="ti-user"></i> You are logged in successfully!
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-            </div>
-        </div>    
-    </div>  --}}
-{{-- card count with icon --}}
+ 
 <!-- Earnings (Monthly) Card Example -->
 <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
             <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
+                <div class="col mr-2 ">
                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Now Showig movies</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$movie_count}}</div>
+                <div class="h5 mb-0 font-weight-bold text-primary">{{$movie_count}}(movies)</div>
                 </div>
                 <div class="col-auto">
-                    <i class="fas fa-film  fa-2x text-primary-300"></i>
+                    <i class="fas fa-film  fa-2x text-primary"></i>
                 </div>
             </div>
             </div>
@@ -46,10 +34,10 @@
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Theater(Hall)</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$halls}}</div>
+                <div class="h5 mb-0 font-weight-bold text-success">{{$halls}}(theaters)</div>
                 </div>
                 <div class="col-auto">
-                    <i class="fas fa-theater-masks fa-2x text-success-300"></i>
+                    <i class="fas fa-theater-masks fa-2x text-success"></i>
                 </div>
             </div>
             </div>
@@ -62,10 +50,10 @@
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">All Booking</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$bookings}}</div>
+                <div class="h5 mb-0 font-weight-bold text-info">{{$bookings}}  (check out)</div>
                 </div>
                 <div class="col-auto">
-                    <i class="fas fa-ticket-alt fa-2x text-info-300"></i>
+                    <i class="fas fa-ticket-alt fa-2x text-info"></i>
                 </div>
             </div>
             </div>
@@ -78,14 +66,11 @@
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
-                    yangon,hlaing township,
-                    0912345678
-                    expample@gmail.com
-                    <p id="time"></p>
+                    <p id="datetime"></p>
                 </div>
                 </div>
                 <div class="col-auto">
-                <i class="fas fa-map-marked-alt fa-2x text-warning-300"></i>
+                    <i class="far fa-clock  fa-2x text-warning"></i>
                 </div>
             </div>
             </div>
@@ -114,7 +99,7 @@
     <div class="col-md-12">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">The most movies booking chart</h6>
+                <h6 class="m-0 font-weight-bold text-primary">The most movies booking(chart)</h6>
             </div>
             <div class="card-body">
                 <div class="chart-area">

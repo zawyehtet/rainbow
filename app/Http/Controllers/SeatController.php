@@ -17,18 +17,8 @@ class SeatController extends Controller
     public function index()
     {
         $seats  = Seat::with('hall')->paginate(10);
-        // $seat = Seat::find(1);
-
-        // return $seat->hall->name;
-        //return $seats;
-
-        //return $seats->hall->name;
         return view('seat.index',compact('seats'));
-        //$seats = Seat::all();
-        //return $halls;
 
-
-       // return view('seat.index',compact('seats'));
     }
 
     /**
@@ -90,14 +80,6 @@ class SeatController extends Controller
         
         return view('seat.edit',compact('seats','seat'));
         
-        //return $movie;
-        //return view("movie.edit",compact("movie"));
-        // $seat = Seat::with('hall')->get();
-        
-        // return view('seat.edit',compact('seat'));
-       //$seat = Seat::find($id);
-       //return view('seat.edit',compact('halls'));
-       //return view('seat.edit',compact('seat'));
     }
 
     /**

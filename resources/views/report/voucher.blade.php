@@ -11,6 +11,7 @@
        
    }
     .frame{
+        border:1px solid black;
         width:200px;
         height:auto;
         margin: 0 auto; 
@@ -26,23 +27,33 @@
     hr{
         border:1px dotted black;
     }
+    .address{
+        text-align:left;
+        font-size:15px;
+    }
+    .footer{
+        width:100%;
+        font-size:12px;
+    }
+    .foot{
+        width:100%;
+        text-align: center;
+    }
     
     </style>
 </head>
 <body >
     <div class="frame">
         <div class="name">
-            <h3>Monthly Sale</h3>
+            <h3>Monthly Ticket Report</h3>
         </div>
         <!-- section of name field -->
         <div class="address">
-            <p>yangon ,hlaing </p>    
-            <p >(+959)9456789,wpa30@gmail.com</p>
+            <p>Yangon / Hlaing Township</p>    
+            <p >(+959)9456789/wpa30@gmail.com</p>
         </div>
-        
-        
         <!-- section of address -->
-        <div class="list">
+        <div class="list" style="text-align:left;">
             <table>
                 <tr>
                     <th>
@@ -60,7 +71,7 @@
             <table>
                 <tr>
                     <th>
-                       Total Price:
+                         Price:
                     </th>
                 </tr>
                 @foreach($movie_id as $mi)
@@ -71,7 +82,11 @@
             </table>
         </div>
         <hr>
-        <div class="">
+        <div class="total">
+            <p>Total: {{$price}} (MMK)</p>
+        </div>
+        <p class="foot">********************</p>
+        <div class="footer">
             
             <p>Items Sold are not exchangeable</p>
             <h3>"Thank You"</h3>

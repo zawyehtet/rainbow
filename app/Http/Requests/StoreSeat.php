@@ -26,8 +26,8 @@ class StoreSeat extends FormRequest
         return [
             'hall_id'     =>'required',
             'number'      => 'required|numeric|min:1',
-            'row'      => 'required',
-            'price'     =>'required|numeric|min:1',
+            'row'      => 'required|numeric|min:1',
+            'price'     =>'required|numeric|min:1000',
             
         ];
     }

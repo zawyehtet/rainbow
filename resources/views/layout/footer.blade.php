@@ -14,5 +14,5 @@
 
     </div>
     <!-- Default to the left -->
-    <strong>Powered by laravel-admin</a></strong>
+    <strong>Powered by wpa30</a></strong>
 </footer>

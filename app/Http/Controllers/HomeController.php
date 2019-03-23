@@ -69,6 +69,7 @@ class HomeController extends Controller
         $movie_booking->load('movie');
         $movies = [];
         $counts = [];
+        //loop for movie and number of booking
         foreach($movie_booking as $mb){
             $movies[] = $mb->movie->title;
             $counts[] = $mb->total_booking;

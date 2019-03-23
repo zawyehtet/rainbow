@@ -1,6 +1,6 @@
 
 @extends('layout.master')
-@section('title','Seat Datatable')
+@section('title','User List')
 
 @section('content')
 @include('layout._header')
