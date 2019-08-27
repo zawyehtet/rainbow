@@ -99,7 +99,7 @@ class MovieController extends Controller
             Movie::where('id', '=', $id)->update(
                 [
 
-                    'image'     =>    $request->image->store('upload'),
+                    'image'     =>    $request->image->store('upload','public'),
                     'status'    =>    $request->status,
                     'title'     =>    $request->title,
                     'duration'  =>    $request->duration,
