@@ -11,7 +11,7 @@
 		<div class="card-header py-3">
 			<input id="movieSearch" type="text" placeholder="Search..">
 		</div>
-	
+
 		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
@@ -52,7 +52,7 @@
 										</li>
 									</ul>
 								</div>
-							</td>	
+							</td>
 						</tr>
 						@endforeach
 					</tbody>
@@ -62,6 +62,6 @@
 		</div>
 	<!-- /.container-fluid -->
 	</div>
-	<!-- End of Main Content -->		
+	<!-- End of Main Content -->
 </div>
 @endsection

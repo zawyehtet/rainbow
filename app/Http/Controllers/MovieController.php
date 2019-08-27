@@ -18,7 +18,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-    
+
        $movies = DB::table('movie')->paginate(4);
         return view('movie.index',compact('movies'));
     }
@@ -51,13 +51,13 @@ class MovieController extends Controller
         // return $request->all();
         //return $file->getClientOriginalName();
         $requestArray = $request->all();
-        $imagePath = $request->image->store('upload');  
+        $imagePath = $request->image->store('upload','public');
         $requestArray['image'] = $imagePath;
         //return $requestArray;
         Movie::create($requestArray);
 
         return redirect('/movie')->with('status','Successfully insert your data!!');
-        
+
     }
 
     /**
@@ -94,11 +94,11 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         if ($request->hasFile('image')) {
             Movie::where('id', '=', $id)->update(
                 [
-                    
+
                     'image'     =>    $request->image->store('upload'),
                     'status'    =>    $request->status,
                     'title'     =>    $request->title,
@@ -114,7 +114,7 @@ class MovieController extends Controller
                 ]
             );
         }
-        
+
 
         return redirect('/movie');
     }
@@ -134,6 +134,6 @@ class MovieController extends Controller
         //return " delte successfully";
         return redirect('/movie');
     }
-   
-    
+
+
 }

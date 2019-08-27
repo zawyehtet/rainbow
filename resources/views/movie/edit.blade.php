@@ -12,8 +12,8 @@
         </div>
         <div class="form-group">
             <label for="status">Status</label>
-            <input type="text" class="form-control"  name="status" value="{{ $movie->status }}" > 
-        </div> 
+            <input type="text" class="form-control"  name="status" value="{{ $movie->status }}" >
+        </div>
         <div class="form-group>
             <label for="title">Title</label>
             <input type="text" class="form-control"  name="title" value="{{ $movie->title}}">
@@ -25,7 +25,7 @@
         <button type="submit" class="btn btn-facebook ">update</button>
         <a href="{{url('/movie')}}" class="btn btn-danger">cancel</a>
     </form>
-    {{-- end form ************************ --}}
+    {{--  end form ************************  --}}
 </div>
-    
+
 @endsection

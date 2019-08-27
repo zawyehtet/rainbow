@@ -41,7 +41,7 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('/movie/edit/{id}','MovieController@edit');
     Route::post('/movie/update/{id}','MovieController@update');
     Route::post('/movie/delete/{id}','MovieController@destroy');
-   
+
 
     //Route::get('/movie/delete/{id}','MovieController@delete');
     //end movie route list************************************8
@@ -89,7 +89,7 @@ Route::middleware(['auth:web'])->group(function () {
     // detail for booking
     Route::get('/booking/show/{id}/detail','BookingController@detail');
     Route::get('/booking/show/book','BookingController@book');
-    //user 
+    //user
     Route::get('/user','UserController@index');
     Route::get('/user/create','UserController@create')->name('user.create');
     Route::post('/user/store','UserController@store');
@@ -105,6 +105,6 @@ Route::middleware(['auth:web'])->group(function () {
     // reports
     Route::get('/monthly/report', 'ReportController@monthly');
     //Route::get('/monthly/movie','ReportController@monthlyMovie');
-    
+
 });
 //Auth::routes();
